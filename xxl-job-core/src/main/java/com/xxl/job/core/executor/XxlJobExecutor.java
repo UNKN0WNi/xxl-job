@@ -64,10 +64,10 @@ public class XxlJobExecutor  {
     // ---------------------- start + stop ----------------------
     public void start() throws Exception {
 
-        // init logpath
+        // 初始化log存储路径
         XxlJobFileAppender.initLogPath(logPath);
 
-        // init invoker, admin-client
+        // 初始化调用者
         initAdminBizList(adminAddresses, accessToken);
 
 
@@ -77,7 +77,7 @@ public class XxlJobExecutor  {
         // init TriggerCallbackThread
         TriggerCallbackThread.getInstance().start();
 
-        // init executor-server
+        // xxl-rpc 初始化
         initEmbedServer(address, ip, port, appname, accessToken);
     }
     public void destroy(){

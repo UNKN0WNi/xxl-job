@@ -32,6 +32,8 @@ public class XxlJobAdminConfig implements InitializingBean, DisposableBean {
 
     private XxlJobScheduler xxlJobScheduler;
 
+
+    //也是bean加载完后就执行调用
     @Override
     public void afterPropertiesSet() throws Exception {
         adminConfig = this;
